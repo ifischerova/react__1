@@ -8,6 +8,10 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+.body {
+  margin: 0 auto;
+}
+
 .container {
   max-width: 26rem;
   margin-right: auto;
@@ -26,4 +30,33 @@ header {
   height: 10rem;
   background-image: url(./img/rocket.svg);
   background-size: contain;
+}
+
+.plushies {
+  margin: 0 auto;
+  display: flex;
+  alig-items: center;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.plushy {
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  
+}
+
+.plushy__image {
+  display: block;
+  max-height: 250px;
+  max-width: 150px;
+}
+
+.plushy__text {
+  text-align: left;
 }

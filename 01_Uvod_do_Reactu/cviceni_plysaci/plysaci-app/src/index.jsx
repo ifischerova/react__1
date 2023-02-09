@@ -17,24 +17,26 @@ const plushy2 = {
 
 const plushies = (
   <>
-    <div class="plushy">
-      <img class="plushy__image" src="odkaz na obrazek" />
-      <h2 class="plushy__name">Jméno plyšáka</h2>
-      <p class="plushy__text">Text o plyšákovi</p>
+    <div className="plushy">
+      <img className="plushy__image" src={ plushy1.image } />
+      <h2 className="plushy__name">{ plushy1.name }</h2>
+      <p className="plushy__text">{ plushy1.text }</p>
     </div>
 
-    <div class="plushy">
-      <img class="plushy__image" src="odkaz na obrazek" />
-      <h2 class="plushy__name">Jméno plyšáka</h2>
-      <p class="plushy__text">Text o plyšákovi</p>
+    <div className="plushy">
+      <img className="plushy__image" src={ plushy2.image } />
+      <h2 className="plushy__name">{ plushy2.name }</h2>
+      <p className="plushy__text">{ plushy2.text }</p>
     </div>
   </>
 )
 
 const content = (
   <>
-    <h1>Plyšáci</h1>
-    <div className="plushies"></div>
+    <header>
+      <h1>Plyšáci</h1>
+    </header>
+    <div className="plushies">{plushies}</div>
   </>
 );
 
