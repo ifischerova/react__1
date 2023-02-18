@@ -1,0 +1,31 @@
+.mailbox__container {
+    margin: 0 auto;
+    disply: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.account {
+    border-radius: 25px;
+    background-color: green;
+    color: black;
+    font-weight: bold;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.messages {
+    padding: 30px;
+    text-align: center;
+}
+
+.unread,
+.no-unread {
+    font-weight: bold;
+    text-align: rigth;
+}
+
+.no-unread {
+    color: gray;
+}
