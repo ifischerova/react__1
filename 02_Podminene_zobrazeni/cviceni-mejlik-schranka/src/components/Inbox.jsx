@@ -8,7 +8,11 @@ const Inbox = (props) => {
         <>
             <div className='mailbox__container'>
                 <div account = { account } className = 'account'>{ account }</div>
-                <div messages = { messages } className='messages unread'> Neprectenych zprav: { messages }</div>
+                { messages === 0 ? (
+                <div  className='messages'>Zadne neprectene zpravy</div>
+                ) : (
+                <div className='messages'>Pocet neprectenych zprav: { messages}</div>
+                )}
             </div>
         </>
     );

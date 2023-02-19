@@ -6,7 +6,7 @@ import './style.css';
 const App = () => {
   return (
     <>
-      <Inbox account='radovan.holatko@mejlik.cz' messages={5}/>
+      <Inbox account='radovan.holatko@mejlik.cz' messages = {5}/>
     </>
   );
 };
