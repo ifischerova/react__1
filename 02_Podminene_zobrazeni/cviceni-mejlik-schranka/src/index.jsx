@@ -1,12 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Inbox from './components/Inbox.jsx'
+import Inbox from './components/Inbox/Inbox.jsx';
+import Header from './components/Header/Header.jsx';
 import './style.css';
 
 const App = () => {
   return (
     <>
-      <Inbox account='radovan.holatko@mejlik.cz' messages = {5}/>
+      <Header user = "Iva Fischerova" />
+      <Inbox account = 'radovan.holatko@mejlik.cz' messages = {0}/>
     </>
   );
 };
