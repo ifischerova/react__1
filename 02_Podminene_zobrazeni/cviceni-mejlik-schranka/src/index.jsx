@@ -7,7 +7,7 @@ import './style.css';
 const App = () => {
   return (
     <>
-      <Header user = "Iva Fischerova" />
+      <Header user = 'Iva'/>
       <Inbox account = 'radovan.holatko@mejlik.cz' messages = {0}/>
     </>
   );

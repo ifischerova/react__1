@@ -1,0 +1,12 @@
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user__name {
+    margin: 0 1rem;
+}
+
+.user__icon {
+    background-image: url('./img/user.svg');
+}

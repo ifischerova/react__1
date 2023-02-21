@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import Logo from '../Logo/Logo.jsx';
+import UserField from '../UserField/UserField.jsx';
 
 const Header = (props) => {
     const { user } = props;
@@ -8,27 +10,14 @@ const Header = (props) => {
         <>
             { user === undefined ?
              (<header>
-                    <div className="topbar container">
-                        <div className="topbar__brand">
-                        <div className="logo"></div>
-                        <div className="company">Mejlík.cz</div>
-                    </div>
+                <Logo />
+                <div className="login">Přihlásit se</div>
 
-                        <div className="login">Přihlásit se</div>
-                    </div>
             </header>) : (
             <header>
-                <div className="topbar container">
-                    <div className="topbar__brand">
-                    <div className="logo"></div>
-                    <div className="company">Mejlík.cz</div>
-                </div>
+                <Logo />
 
-                <div className="user">
-                    <div className="user__name">{ user }</div>
-                    <div className="user__icon"></div>
-                </div>
-                </div>
+                <UserField user = { user }/>
             </header>
             ) }
         </>
