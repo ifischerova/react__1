@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 
-const City = ({name, population, area}) => {
+const City = ({name, population, area, district, img}) => {
 
     return (
         <>
@@ -18,6 +18,13 @@ const City = ({name, population, area}) => {
                     <li className="city__item">
                         <h2>Rozloha:</h2>
                         <p>{area}</p>
+                    </li>
+                    <li className="city__item">
+                        <h2>Okres:</h2>
+                        <p>{district}</p>
+                    </li>
+                    <li className="city__item">
+                        <img src={img} alt={name}></img>
                     </li>
                 </ul>
             </div>
