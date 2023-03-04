@@ -8,7 +8,7 @@ Apps are created with special [React package from Czechitas](https://www.npmjs.c
 npx create-czechitas-app my-app
 ```
 
-and run by 
+and run by:
 
 ```
 npm start
