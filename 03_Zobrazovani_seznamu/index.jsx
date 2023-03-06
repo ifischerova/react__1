@@ -1,4 +1,24 @@
-export const cities = [
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import './style.css';
+import City from './components/City.jsx';
+
+const citiesNames = [
+  'Praha',
+  'Brno',
+  'Ostrava',
+  'Plzeň',
+  'Liberec',
+  'Olomouc',
+  'České Budějovice',
+  'Hradec Králové',
+  'Ústí nad Labem',
+  'Pardubice',
+];
+
+const cityElements = citiesNames.map((city) => <div className="city">{city}</div>);
+
+const cities = [
   {
     name: 'Praha',
     photo:
@@ -4864,3 +4884,27 @@ export const cities = [
     district: 'okres Sokolov',
   },
 ];
+ 
+
+
+
+
+const App = () => {
+  return (
+    <div className="container">
+      <h1>Ceska mesta</h1>{
+        cities.map((city) => <City 
+          key={city.name}
+          name={city.name}
+          population={city.population}
+          area={city.area}
+          district={city.district}
+          img={city.photo}/>)
+      }
+    </div>
+  );
+};
+
+createRoot(
+  document.querySelector('#app'),
+).render(<App />);
