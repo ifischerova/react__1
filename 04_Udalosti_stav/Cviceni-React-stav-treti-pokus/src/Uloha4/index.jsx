@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './carousel.css'
 
 // Zadání 1: Nachystej si adresy obrázků níže do pole.
@@ -16,21 +16,30 @@ import './carousel.css'
 	https://source.unsplash.com/7go5UASxmDY/880x500
 	https://source.unsplash.com/YmATDIFsCmQ/880x500
 */
+const urls = ['https://source.unsplash.com/WLUHO9A_xik/880x500','https://source.unsplash.com/DA1eGglMmlg/880x500', 'https://source.unsplash.com/kTxL6le0Wgk/880x500','https://source.unsplash.com/7go5UASxmDY/880x500', 'https://source.unsplash.com/YmATDIFsCmQ/880x500' ]
+
+
 
 export const Uloha4 = () => {
+	const [urlIndex, setUrlIndex] = useState(0);
+
+	const urlsLength = urls.length - 1; 
+
+	console.log(urls.length)
+
 	return (
 		<div className="carousel">
-			<button className="carousel__predchozi" aria-label="předchozí">
+			<button onClick={() => setUrlIndex(urlIndex - 1)} className="carousel__predchozi" aria-label="předchozí" disabled={urlIndex <= 0}>
 				←
 			</button>
 			<div className="carousel__media">
 				<img
 					className="carousel__image"
-					src="https://source.unsplash.com/7go5UASxmDY/880x500"
-					alt=""
+					src={urls[urlIndex]}
+					alt={'obrazek s indexem' + urlIndex}
 				/>
 			</div>
-			<button className="carousel__dalsi" aria-label="další">
+			<button onClick={() => setUrlIndex(urlIndex + 1)} className="carousel__dalsi" aria-label="další" disabled={urlIndex >= urlsLength}>
 				→
 			</button>
 		</div>
