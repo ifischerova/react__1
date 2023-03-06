@@ -17,6 +17,16 @@ import './carousel.css'
 	https://source.unsplash.com/YmATDIFsCmQ/880x500
 */
 
+/*const urls = [
+	'https://source.unsplash.com/WLUHO9A_xik/880x500',
+	'https://source.unsplash.com/DA1eGglMmlg/880x500',
+	'https://source.unsplash.com/kTxL6le0Wgk/880x500',
+	'https://source.unsplash.com/7go5UASxmDY/880x500',
+	'https://source.unsplash.com/YmATDIFsCmQ/880x500',
+]*/
+
+
+
 export const Uloha4 = () => {
 	return (
 		<div className="carousel">
@@ -26,8 +36,7 @@ export const Uloha4 = () => {
 			<div className="carousel__media">
 				<img
 					className="carousel__image"
-					src="https://source.unsplash.com/7go5UASxmDY/880x500"
-					alt=""
+					src=""
 				/>
 			</div>
 			<button className="carousel__dalsi" aria-label="další">
