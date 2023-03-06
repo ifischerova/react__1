@@ -23,11 +23,11 @@ export const Uloha3 = () => {
 				src={diceUrls[cisloNaKostce - 1]} /* indexy se číslují od nuly */
 				width={60}
 				height={60}
-				alt="Kostka s číslem" {cisloNaKostce}
+				alt={'Kostka s číslem' + cisloNaKostce}
 				className="kostka__ikona"
 			/>
 			<p className="kostka__text">Na kostce je číslo {cisloNaKostce}.</p>
-			<button className="kostka__akce" onClick={() => setCisloNaKostce(cisloNaKostce + 1)}>další</button>
+			<button onClick={() => setCisloNaKostce(cisloNaKostce + 1)} className="kostka__akce">další</button>
 		</div>
 	)
 }
