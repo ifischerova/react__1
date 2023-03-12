@@ -5,17 +5,36 @@ import './style.css';
 
 const App = () => {
 
-  const [datetime, setDatetime] = useState('')
+  const [datetime, setDatetime] = useState('');
+
+  const [timezone, setTimeZone] = useState('Europe/Prague')
 
   useEffect(() => {
-    fetch('https://worldtimeapi.org/api/timezone/Europe/Prague')
+    fetch(`https://worldtimeapi.org/api/timezone/${timezone}`)
       .then((response) => response.json())
       .then((data) => setDatetime(data.datetime));
-    },[])
+    }, [timezone])
 
   return (
     <div className="container">
        <p>Hodnota datetime je {datetime}</p>
+
+      <form>
+        <label>
+          Vyberte zonu:{' '}
+          <select
+            value = {timezone}
+            onChange = {(e) => setTimeZone(e.target.value)}
+          >
+            <option value="America/New_York">New York</option>
+            <option value="Europe/London">Londýn</option>
+            <option value="Europe/Moscow">Moskva</option>
+            <option value="Europe/Prague">Praha</option>
+            <option value="Asia/Hong_Kong">Hong Kong</option>
+            <option value="Asia/Jerusalem">Jeruzalém</option>
+          </select>
+        </label>
+      </form>
     </div>
   );
 };
