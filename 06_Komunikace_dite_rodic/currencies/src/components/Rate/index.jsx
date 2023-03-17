@@ -12,12 +12,8 @@ const Rate = ({from}) => {
 
   useEffect(() => {
     fetch(`https://api.frankfurter.app/latest?from=${from}&to=CZK`)
-      .then((response) => {
-          return response.json();
-      })
-      .then((data) => {
-          setToCurrency(data.rates.CZK)
-      })
+      .then((response) =>  response.json())
+      .then((data) => setToCurrency(data.rates.CZK))
   }, [from])
 
   return (
