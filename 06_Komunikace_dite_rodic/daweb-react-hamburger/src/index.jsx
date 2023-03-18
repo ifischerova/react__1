@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
+// Dcerina komponenta !!
 const MenuItem = ({text, onSelect}) => {
   return (
     <a href="#" className="menu-item" onClick={() => onSelect(text)}>
@@ -10,6 +11,8 @@ const MenuItem = ({text, onSelect}) => {
   );
 };
 
+
+// Rodicovska komponenta !!
 const App = () => {
 
   // V komponentě App vytvořte stav menuOpened, který bude obsahovat hodnotu true nebo false podle toho, zda má být menu otevřeno nebo zavřeno. Stav ovládejte kliknutím na tlačítko .menu__btn.
