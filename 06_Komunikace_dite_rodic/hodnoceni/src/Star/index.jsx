@@ -6,6 +6,7 @@ const Star = ({onGlow, onDim}) => {
 
   const handleClick = () => {
     setGlowing(!glowing);
+    glowing === true ? onDim() : onGlow();
   }
 
   
